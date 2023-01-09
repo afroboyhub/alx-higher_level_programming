@@ -1,4 +1,11 @@
 #!/usr/bin/python3
+# 10-square.py
+
+""" File name : 10-square.py
+
+    It is not allowed to import any module
+
+"""
 
 Rectangle = __import__('9-rectangle').Rectangle
 

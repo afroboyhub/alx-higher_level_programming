@@ -1,4 +1,11 @@
 #!/usr/bin/python3
+# 4-inherits_from.py
+
+""" File name : 4-inherits_from.py
+
+    It is not allowed to import any module
+
+"""
 
 def inherits_from(obj, a_class):
     """inherits_from: returns True if the

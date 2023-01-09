@@ -1,4 +1,11 @@
 #!/usr/bin/python3
+# 9-rectangle.py
+
+""" File name : 9-rectangle.py
+
+    It is not allowed to import any module
+
+"""
 
 BaseGeometry = __import__('7-base_geometry').BaseGeometry
 
