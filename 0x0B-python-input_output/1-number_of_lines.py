@@ -1,13 +1,16 @@
 #!/usr/bin/python3
 # 1-number_of_lines.py
 
-"""Defines a text file line-counting function."""
+""" File name : 1-number_of_lines.py
+    Use the with statement
+    It is not allowed to import any module
+"""
 
 
 def number_of_lines(filename=""):
-    """Return the number of lines in a text file."""
-    lines = 0
-    with open(filename) as f:
-        for line in f:
-            lines += 1
-    return lines
+    """number_of_lines: returns the number of lines of a text file:
+    Args:
+        filename (str): content of the file. Defaults to "".
+    """
+    with open(filename, 'r', encoding='utf-8') as f:
+        return len(f.readlines())

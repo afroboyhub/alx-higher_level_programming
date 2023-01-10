@@ -1,30 +1,27 @@
 #!/usr/bin/python3
 # 2-read_lines.py
 
-"""Defines a text file-reading function."""
+""" File name : 2-read_lines.py
+    Use the with statement
+    It is not allowed to import any module
+"""
 
 
 def read_lines(filename="", nb_lines=0):
-    """Print a given number of lines from a UTF8 text file to stdout.
+    """read_lines reads n lines of a text file (UTF8) and prints it to stdout
+
     Args:
-        filename (str): The name of the file.
-        nb_lines (int): The number of lines to read from the file.
+        filename (str): content of the file. Defaults to "".
+        nb_lines (int): number lines. Defaults to 0.
+
+    Returns:
+        str: returns the number of lines of a text file
     """
-    with open(filename, encoding="utf-8") as f:
+    line_count = 0
+    with open(filename, 'r', encoding='utf-8') as f:
         if nb_lines <= 0:
             print(f.read(), end="")
-            return
-
-        lines = 0
         for line in f:
-            lines += 1
-        f.seek(0)
-        if nb_lines >= lines:
-            print(f.read(), end="")
-            return
-
-        else:
-            n = 0
-            while n < nb_lines:
-                print(f.readline(), end="")
-                n += 1
+            if line_count < nb_lines:
+                print(line, end="")
+                line_count += 1
